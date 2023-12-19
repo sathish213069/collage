@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+/*first container styles */
+.first-container{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    overflow-x: hidden;
+}
+.first-image{
+    width: 100%;
+    height: 50vh;
+    background-image: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0%;
+    filter: brightness(80%);
+}
+
+/*              navbar styles  */
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 45px;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+.right-head{
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+    gap: 20px;
+}
+.right-head button{
+    padding: 5px;
+    width: 120px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inner-details h1{
+    font-size: 40px;
+    color: white;
+}
+.header i{
+    color: white;
+    font-size: 25px;
+}
+nav button:hover{
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(184, 160, 25);
+    box-shadow: 2px 2px 3px black;
+}
+.header input:checked~ .right-head{
+      background-color: rgb(211, 139, 154);
+      left: 0;
+      transition: 2s;
+}
+.header input{
+    display: none;
+}
+.header i{
+    display:none;
+}
+@media screen and (max-width:800px) {
+    .right-head{
+        position: fixed;
+        left: -100%;
+        transition: 2s;
+        background-color:cadetblue;
+        top: 63px;
+        width: 100%;
+        flex-direction: column;
+        height: 90vh;
+        display: grid;
+        justify-content: center;
+    }
+    .header i{
+        display: inline;
+    }
+    nav{
+        justify-content: space-between;
+    }
+     
+}
+.inner-details{
+    position: absolute;
+    color:white;
+    text-align: center;
+    top:25vh ;
+    width: 100%;
+    
+}
+.inner-details h1{
+    text-shadow: 2px 2px 10px black;
+}
+
+
+.second-container{
+    width: 100%;
+    min-height: 70vh;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.second-container iframe{
+    border-radius: 10px;
+    height: 400px;
+    width: 80%;
+}
+.third-container{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    padding-top: 50px;
+}
+.third-inbox{
+    display: flex;
+    gap: 20px;
+}
+.third-inbox i{
+    color: red;
+    font-size: 20px;
+}
+.icone-box{
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+
+}
+.form-box{
+    width: 500px;
+}
+.form-box input,textarea{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius:5px ;
+    background-color: white;
+    border: 1px solid gray;
+}
+.form-box button{
+    padding: 8px;
+    width: 120px;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    color: orangered;
+    background-color: white;
+    cursor: pointer;
+}
+.form-box button:hover{
+    background-color: orangered;
+    color: white;
+}
+@media screen and (max-width:800px){
+    .third-container{
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .icone-box{
+        width: auto;
+    }
+    .form-box{
+        width: auto;
+        padding: 10px;
+    }
+    .second-container{
+        padding-top: 70px;
+    }
+}
